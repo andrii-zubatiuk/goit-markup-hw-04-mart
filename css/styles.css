@@ -38,7 +38,8 @@ img {
 }
 
 .page-header {
-  min-height: 162px;
+  padding-top: 36px;
+  padding-bottom: 100px;
 }
 /* SITE NAV */
 
@@ -60,8 +61,7 @@ img {
   font-weight: 300;
   color: #555252;
   text-decoration: none;
-  padding-top: 36px;
-  padding-bottom: 104px;
+  padding: 5px;
 }
 
 .site-logo:first-letter {
@@ -73,8 +73,8 @@ img {
   display: block;
   padding-right: 18px;
   padding-left: 18px;
-  padding-top: 42px;
-  padding-bottom: 110px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 14px;
   line-height: 0.785;
   font-family: var(--rubric-font);
@@ -111,11 +111,13 @@ img {
   margin-bottom: 0;
 }
 
-.featured-list-item:hover .product-name {
+.featured-list-item:hover .product-name,
+.featured-list-item:focus .product-name {
   background-color: var(--accent-color);
 }
 
-.featured-list-item:hover .product-price {
+.featured-list-item:hover .product-price,
+.featured-list-item:focus .product-price {
   background-color: #7fd9c7;
 }
 
@@ -164,6 +166,20 @@ img {
   display: flex;
 }
 
+.product-link {
+  text-decoration: none;
+}
+
+.product-link:hover .product-name,
+.product-link:focus .product-name {
+  background-color: var(--accent-color);
+}
+
+.product-link:hover .product-price,
+.product-link:focus .product-price {
+  background-color: #7fd9c7;
+}
+
 /* LATEST NEWS */
 
 .news-list {
@@ -197,13 +213,16 @@ img {
   text-align: center;
 }
 
+.news-image {
+  margin-bottom: 16px;
+}
+
 .news-item-title {
   font-size: 18px;
   line-height: 1.4;
   font-family: var(--rubric-font);
   color: var(--news-color);
   font-weight: 600;
-  margin-top: 16px;
   margin-bottom: 48px;
 }
 
@@ -216,14 +235,23 @@ img {
 }
 
 .button {
+  display: inline-block;
+  text-decoration: none;
   font-size: 16px;
   line-height: 1.625;
   font-family: var(--rubric-font);
-  color: var(--white-color);
+  color: var(--news-color);
   font-weight: 300;
-  background-color: var(--accent-color);
-  border: 0;
+  background-color: var(--white-color);
+  border: 1px solid var(--news-color);
   border-radius: 4px;
   padding: 20px 42px;
   cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  border: none;
 }
